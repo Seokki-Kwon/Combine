@@ -75,7 +75,7 @@ print(currentSubject.value) // 값을 확인가능
 
 // eraseToAnyPublisher
 // 구독자에게 게시자에대한 세부 정보를 숨긴다?
-let subject2 = PassthroughSubject<Int, Never>()
+let subject2 = CurrentValueSubject<Int, Never>(0)
 let publisher = subject2.eraseToAnyPublisher()
 
 publisher
